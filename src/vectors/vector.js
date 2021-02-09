@@ -5,7 +5,7 @@ let vector = {
     create: function(x, y) {
         let obj = Object.create(this);
         obj.setX(x);
-        obj.setY(x);
+        obj.setY(y);
         return obj;
     },
 
@@ -28,7 +28,7 @@ let vector = {
     setAngle: function(angle) {
         let length = this.getLength();
         this._x = Math.cos(angle) * length;
-        this._y = Math.cos(angle) * length;
+        this._y = Math.sin(angle) * length;
     },
 
     getAngle: function() {
